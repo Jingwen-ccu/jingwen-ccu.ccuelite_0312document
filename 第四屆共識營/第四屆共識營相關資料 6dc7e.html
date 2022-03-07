@@ -1,0 +1,722 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>第四屆共識營相關資料</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3f7cf23c-aa80-4dd3-90e8-fccbdfa6bf77" class="page sans"><header><h1 class="page-title">第四屆共識營相關資料</h1></header><div class="page-body"><figure id="6dc7e4c5-bf18-4698-bd0e-850daea44337" class="image"><a href="%E7%AC%AC%E5%9B%9B%E5%B1%86%E5%85%B1%E8%AD%98%E7%87%9F%E7%9B%B8%E9%97%9C%E8%B3%87%E6%96%99%206dc7e/Untitled.png"><img style="width:480px" src="%E7%AC%AC%E5%9B%9B%E5%B1%86%E5%85%B1%E8%AD%98%E7%87%9F%E7%9B%B8%E9%97%9C%E8%B3%87%E6%96%99%206dc7e/Untitled.png"/></a></figure><h2 id="21a7d88f-8c86-457e-abb5-3d69dd576713" class="">一、共識營規則</h2><ol type="1" id="db0b1c5c-02d4-46a6-aad3-c0fda7a9c344" class="numbered-list" start="1"><li>活動過程中，不須按屆次、組織入座。</li></ol><ol type="1" id="81c0780a-722c-499d-b2a0-9510976ba2c9" class="numbered-list" start="2"><li>會議進行中，若需發言，則需舉手示意，待會議主席許可後，方可發言。</li></ol><ol type="1" id="a482f584-c87a-451c-b21e-14d55e172244" class="numbered-list" start="3"><li>若有同時舉手狀況發生，則14屆院生可優先發言，其餘狀況視會議主席定奪。</li></ol><ol type="1" id="534ba7a7-6a83-4ea7-8e08-973c3e586ce7" class="numbered-list" start="4"><li>若有參與者擾亂現場會議秩序，以致影響其他參與者發言權之事件，於會議發生的第一次事件將由會議主席口頭勸導，後續若再發生則計該名參與者一次警告，警告達三次將會由會議主席宣告該名參與者失去本場會議發言權，其餘狀況則由會議主席定奪。</li></ol><ol type="1" id="18f17439-995d-43fd-a5ee-8f2823dcea25" class="numbered-list" start="5"><li>每次表決前會確定在場院生人數，並公告於現場。</li></ol><ol type="1" id="8d5b5e8a-bf77-439c-afe2-90a7c524c942" class="numbered-list" start="6"><li>臨時動議納入議程討論條件如下：(兩項皆須滿足)<ol type="a" id="408629e7-c794-432c-acaa-ea66f515154a" class="numbered-list" start="1"><li>大於等於二分之一在場院生同意。</li></ol><ol type="a" id="da2141a6-7188-4a4d-85fb-96e7a2e5e0e9" class="numbered-list" start="2"><li>於表定活動結束時間晚上六點以前提出。</li></ol></li></ol><ol type="1" id="1fea4549-2e2e-4b8e-bd06-fb765de206b1" class="numbered-list" start="7"><li>若原議程討論超過表定活動結束時間晚上六點，則活動至多延長至晚上八點，並加快議程討論。</li></ol><ol type="1" id="e8788522-e8b6-46bd-8861-ed1b55ef0b94" class="numbered-list" start="8"><li>若於活動中有臨時動議要提出，則可以透過由主辦方提供的slido網頁，進行留言提案，我們會根據各臨時動議中，所獲讚數最高項開始討論，但若時間超過18：00，則不再繼續討論新的臨時動議。</li></ol><h2 id="8a4b7251-e959-4df4-953b-d1abacea912e" class="">二、修法小組說明</h2><ol type="1" id="4d4dd4b7-ac81-4bf8-87f1-1bbddd4c3e55" class="numbered-list" start="1"><li>成員組成方式：於共識營結束前，現場將依照屆次重新安排座位，各屆次會選出各屆代表，該代表即成為第四屆共識營修法小組，若各屆無代表產生，則採用隨機抽取方式。</li></ol><ol type="1" id="474a0654-72b8-44b0-8ee7-d6e603a2de69" class="numbered-list" start="2"><li>成員人數：14屆、13屆、12屆、11屆各一人、共識營總召、共識營副召。</li></ol><ol type="1" id="eb3a5538-4760-4b83-9b96-78d891d3f232" class="numbered-list" start="3"><li>修法小組職責說明：於共識營結束後，總副召將協助修法小組根據共識營當日通過議案來修改紫荊書院標準作業程序與紫荊書院標準作業程序增修要點，於修改完成後，會依序上呈給全體院生、紫荊書院老師、紫荊書院專案人員、通識教育中心主任，待主任核可過後，公布於紫荊書院臉書社團即正式完成修法。</li></ol><h2 id="e4ad3b67-e9d8-4b8c-bdf7-1d4ba58cc1cc" class="">三、議案討論方式</h2><figure id="336560d2-d316-4cfb-98c1-b29e32e6b7c4" class="image"><a href="%E7%AC%AC%E5%9B%9B%E5%B1%86%E5%85%B1%E8%AD%98%E7%87%9F%E7%9B%B8%E9%97%9C%E8%B3%87%E6%96%99%206dc7e/Untitled%201.png"><img style="width:1228px" src="%E7%AC%AC%E5%9B%9B%E5%B1%86%E5%85%B1%E8%AD%98%E7%87%9F%E7%9B%B8%E9%97%9C%E8%B3%87%E6%96%99%206dc7e/Untitled%201.png"/></a></figure><hr id="2bd09de6-b29a-45ce-8baf-df46b0df19de"/><h2 id="84b32842-9fba-4a2e-bda7-3b869d167248" class="">四、活動流程</h2><table id="ab8fcd14-8f5e-455a-9acc-c9a00ac97dfa" class="simple-table"><thead><tr id="deb9d777-f852-46b1-b74a-66c2c82eefbe"><th id="QXd`" class="simple-table-header">時間</th><th id="&lt;;Zg" class="simple-table-header">時長</th><th id="&gt;V?N" class="simple-table-header">內容</th></tr></thead><tbody><tr id="52ccb1d1-0706-49af-a304-26c62272bd59"><td id="QXd`"><strong>11</strong><strong>：30-12：00</strong></td><td id="&lt;;Zg">30分鐘</td><td id="&gt;V?N">參與者入場</td></tr><tr id="044e0ef7-e882-4232-bbbe-64a62ca28a5d"><td id="QXd`"><strong>12</strong><strong>：00-13：00</strong></td><td id="&lt;;Zg">60分鐘</td><td id="&gt;V?N">午餐</td></tr><tr id="48e9061f-92f9-4f6e-b111-36cc3861517c"><td id="QXd`"><strong>13</strong><strong>：00-13：05</strong></td><td id="&lt;;Zg">5分鐘</td><td id="&gt;V?N">開場</td></tr><tr id="5eec4102-c93a-4a04-ac61-78d3185f0a6b"><td id="QXd`"><strong>13</strong><strong>：05-13：20</strong></td><td id="&lt;;Zg">15分鐘</td><td id="&gt;V?N">師長致詞</td></tr><tr id="96d0620d-90c7-46aa-bb30-a39c64dc4750"><td id="QXd`"><strong>13</strong><strong>：20-13：30</strong></td><td id="&lt;;Zg">10分鐘</td><td id="&gt;V?N">緩衝</td></tr><tr id="f4b9eb38-21e2-47b1-ade2-53d89f5e2733"><td id="QXd`"><strong>13</strong><strong>：30-13：40</strong></td><td id="&lt;;Zg">20分鐘</td><td id="&gt;V?N">議案討論方式與會議規則說明</td></tr><tr id="f933bad3-c70c-470c-a8f3-4b6d37c9375c"><td id="QXd`"><strong>13</strong><strong>：40-15：00</strong></td><td id="&lt;;Zg">80分鐘</td><td id="&gt;V?N">議案討論</td></tr><tr id="530fde86-137f-4797-b915-ff4033bcf3dd"><td id="QXd`"><strong>15</strong><strong>：00-15：10</strong></td><td id="&lt;;Zg">10分鐘</td><td id="&gt;V?N">休息</td></tr><tr id="10fc18f4-9cf6-47c2-b474-5ef131bd3ad9"><td id="QXd`"><strong>15</strong><strong>：10-16：30</strong></td><td id="&lt;;Zg">80分鐘</td><td id="&gt;V?N">議案討論</td></tr><tr id="df0275d7-a68f-43b1-9dac-3a748e71273e"><td id="QXd`"><strong>16</strong><strong>：30-16：40</strong></td><td id="&lt;;Zg">10分鐘</td><td id="&gt;V?N">休息</td></tr><tr id="4667e8d6-aac8-4cd2-b264-c4a3aa69f21a"><td id="QXd`"><strong>16</strong><strong>：40-17：40</strong></td><td id="&lt;;Zg">60分鐘</td><td id="&gt;V?N">議案討論</td></tr><tr id="c9396284-3c76-4250-af34-6e99714723f1"><td id="QXd`"><strong>17</strong><strong>：40-17：50</strong></td><td id="&lt;;Zg">10分鐘</td><td id="&gt;V?N">議案總結</td></tr><tr id="16660863-34cc-425a-8249-0385a1e138b6"><td id="QXd`"><strong>17</strong><strong>：50-18：05</strong></td><td id="&lt;;Zg">15分鐘</td><td id="&gt;V?N">修法小組選任</td></tr><tr id="71c3938a-e1fe-4706-9307-c07aec61b71a"><td id="QXd`"><strong>18</strong><strong>：05-18：10</strong></td><td id="&lt;;Zg">5分鐘</td><td id="&gt;V?N">大合照完後填寫回饋表單</td></tr></tbody></table><hr id="f0e0f86b-ec69-419b-96ac-f12a094906e8"/><h2 id="348d1dbd-f059-43c1-b688-e3e52cc46156" class="">五、議案詳細說明</h2><table id="e99df33b-6ec9-45cf-8162-bdd2b1a89a18" class="simple-table"><tbody><tr id="e952d6dd-b03a-4666-ab99-b0093e4b0125"><td id="iXia">編號</td><td id="wu}@">現行條文</td><td id="WwNZ">修正條文</td><td id="{lfD">說明</td><td id="&gt;RPO">備註</td></tr><tr id="21b5fed4-18dd-45dd-a820-5e559079b671"><td id="iXia">一</td><td id="wu}@">法規名稱：紫荊書院<mark class="highlight-red"><span style="border-bottom:0.05em solid">標準作業程序</span></mark>。</td><td id="WwNZ"><mark class="highlight-teal_background">(修改)</mark> 法規名稱：紫荊書院<mark class="highlight-red"><span style="border-bottom:0.05em solid">自治規章</span></mark>。
+  </td><td id="{lfD">修改用意說明：標準作業程序(簡稱SOP) 是指在有限時間與資源內，為了執行複雜的事務而設計的內部程序，將各步驟鉅細靡遺列出。然現行紫荊書院標準作業程序內容應偏向囊括於規章的「章程」或「規程」，即指導團體組織活動，讓參與工作者或受團體制約的人遵守和依循。又紫荊書院性質乃學生自治組織，規章由全體院生共同決議，故本案將紫荊書院標準作業程序正名為紫荊書院自治規章。
+  </td><td id="&gt;RPO"></td></tr><tr id="00fdb69c-ce7e-4bd0-b38d-6f9129450f0c"><td id="iXia">二
+  </td><td id="wu}@">第一編總則第一條：「本<mark class="highlight-red"><span style="border-bottom:0.05em solid">作業程序</span></mark>訂定目的係為明訂書院辦理活動之各項重要事宜及規定,避免歷年來因對規定認知不同而常有不必要之錯誤之情形。」
+  </td><td id="WwNZ"><mark class="highlight-teal_background">(修改)</mark> 本<mark class="highlight-red"><span style="border-bottom:0.05em solid">自治規章</span></mark>訂定目的係為明訂書院辦理活動之各項重要事宜及規定,避免歷年來因對規定認知不同而常有不必要之錯誤之情形。
+  </td><td id="{lfD">修改用意說明：若一號議案通過，本案須隨之修正。
+  </td><td id="&gt;RPO">
+   
+  </td></tr><tr id="3c32ce6c-0233-45cb-836f-4ab656b7b564"><td id="iXia">三
+  </td><td id="wu}@">現行無條文。
+  </td><td id="WwNZ"><mark class="highlight-orange_background">(新增)</mark> 總則編第三條：「下屆學社、家爸媽團、輔導員團應於組織成立後，下學期開始前召開共同會議。」
+  </td><td id="{lfD">提案動機說明：由於三個團隊將在新的一年密切共事，本案希望透過建立一個管道讓三方在共事前期商討未來相處與合作模式並熟悉彼此，以利組織運行。
+  </td><td id="&gt;RPO">
+   
+  </td></tr><tr id="e0e35fbc-5ce6-4191-97be-718536f142cb"><td id="iXia">四
+  </td><td id="wu}@">第二編輔導員第五條：「輔導員得於每學期召開與學社、家爸媽團之共同會議。」
+  </td><td id="WwNZ"><mark class="highlight-brown_background">(刪除本條)</mark>
+  </td><td id="{lfD">提案動機說明：若三號議案通過，本條將淪為冗規，應隨之刪除。反之，若未通過則不刪除，但不排除內容更動之可能性。
+  </td><td id="&gt;RPO">
+   
+  </td></tr><tr id="5006e840-da98-4b4f-8e47-9bb86c52cf85"><td id="iXia">五
+  </td><td id="wu}@">第二編輔導員第一條第二項：「專案輔導員:和常設輔導員同屆以上,且具特殊活動經驗之在學院生。無人有相關活動經驗之情形,活動籌辦者應自行通知常設輔導員團,再由常設輔導員團依活動性質推薦適合之輔導員。」
+  </td><td id="WwNZ"><mark class="highlight-gray_background">(待釋義)</mark>
+  </td><td id="{lfD">本提案動機說明：本案期能探求本條之規範意旨，並修正使之定義更為清晰。
+  </td><td id="&gt;RPO">待與紫荊書院專案人員與指導老師討論。
+  </td></tr><tr id="d7ece202-6ae2-41f7-91d7-715290550d3b"><td id="iXia">六
+  </td><td id="wu}@">第三編學社運作第三條第一項：「應於每學年第一學期期末選任之。」
+  </td><td id="WwNZ"><mark class="highlight-teal_background">(修改)</mark> <mark class="highlight-red"><span style="border-bottom:0.05em solid">若當屆學社欲舉辦，</span></mark>應於每學年第一學期期末選任之。
+  </td><td id="{lfD">提案動機說明：現行紫荊書院標準程序針對此條文說明易解讀成「當屆學社應舉辦實習幹部且於每學年第一學期期末選任之」，惟本條文設立時應無此義。
+  </td><td id="&gt;RPO">
+   
+  </td></tr><tr id="09f44a6a-1c96-491c-b852-4fb973652743"><td id="iXia">七
+  </td><td id="wu}@">第四編書院活動舉辦流程第二條：「<mark class="highlight-red"><span style="border-bottom:0.05em solid">當屆學社須於前一學期提交年度計畫，</span></mark>使專案人員及輔導員了解常設活動與非常設活動之時程規畫、規模及預算。」
+  </td><td id="WwNZ"><mark class="highlight-teal_background">(修改)</mark> <mark class="highlight-red"><span style="border-bottom:0.05em solid">下屆學社與家爸媽團應於組織成立後，該學期結束前，提交年度計畫，</span></mark>使專案人員及輔導員了解常設活動與非常設活動之時程規畫、規模及預算。
+  </td><td id="{lfD">提案動機說明：家爸媽團同學社一般會於每學年舉辦多項活動，故應比照辦理。
+  </td><td id="&gt;RPO">
+   
+  </td></tr><tr id="d66cd932-61c5-4117-9463-4c579ccc3bb3"><td id="iXia">八
+  </td><td id="wu}@">現行無相關條文。
+  </td><td id="WwNZ"><mark class="highlight-orange_background">(新增)</mark> 第四編第四條：請依活動性質找導師指導，若此活動無相對應之專業導師，請除了一位書院導師外，再找校內一位符合此專業教師協同指導。
+  </td><td id="{lfD">本提案動機說明：於上一學期導生會有提到相關規定，但未明列於現行紫荊書院標準作業程序。
+  </td><td id="&gt;RPO">此規定會於共識營上提出，但不會作修正。
+  </td></tr><tr id="2eec6415-36de-413a-9a8f-04889236a454"><td id="iXia">九
+  </td><td id="wu}@">現行無相關條文。
+  </td><td id="WwNZ"><mark class="highlight-orange_background">(新增)</mark> 第五編第六條，家爸媽團運作應由當屆家爸媽團團長決定。
+  </td><td id="{lfD">本提案動機說明：現行紫荊書院標準作業程序無明確說明家爸媽團團長之職權與義務，造成家爸媽團團長管轄範圍不明，或無相關條款賦予其職權，易淪為有名無實。
+  </td><td id="&gt;RPO">
+   
+  </td></tr><tr id="302759ce-4a80-4b93-b006-3ba7cfc7508f"><td id="iXia">十
+  </td><td id="wu}@">第五編第三條：「家爸媽團主要工作為凝聚感情及辦理相關活動，<mark class="highlight-red"><span style="border-bottom:0.05em solid">並負責共同教室大樓104 教室之空間維護</span></mark>。」
+  </td><td id="WwNZ"><mark class="highlight-teal_background">(修改)</mark> 家爸媽團主要工作為凝聚感情及辦理相關活動，<mark class="highlight-red"><span style="border-bottom:0.05em solid">並負責維護共同教室大樓之紫荊書院共同空間</span></mark>。
+  </td><td id="{lfD">本提案動機說明：未來國立中正大學將成立第八學院不分系所，將於共同教室大樓增設除104教室以外之紫荊書院院生共同空間，故本條應修改家爸媽團之空間維護範圍。
+  </td><td id="&gt;RPO">
+   
+  </td></tr><tr id="2fbd1e9d-badf-4674-b587-3b72c80a5cc5"><td id="iXia">十一
+  </td><td id="wu}@">紫荊書院標準作業增修要點第二條第三項：「1/2 在學院生得發起共識營」。
+  </td><td id="WwNZ"><mark class="highlight-teal_background">(修改)</mark> 降低門檻。
+  </td><td id="{lfD">本提案動機說明：現門檻經第四屆共識營籌備團隊評估過後，認為門檻過高，不易達成條件，故本團隊希望能夠降低發起門檻，使全體院生能夠更易行使此一權利。
+  </td><td id="&gt;RPO">此為紫荊書院標準作業程序作業增修要點內容。
+  </td></tr><tr id="30e1075e-1b44-4874-b6d6-d32f4409d0e5"><td id="iXia">十二
+  </td><td id="wu}@">法規名稱：紫荊書院<mark class="highlight-red"><span style="border-bottom:0.05em solid">標準作業程序增修要點</span></mark>。
+  </td><td id="WwNZ"><mark class="highlight-teal_background">(修改)</mark> 法規名稱：紫荊書院<mark class="highlight-red"><span style="border-bottom:0.05em solid">自治規章增修要點</span></mark>。
+  </td><td id="{lfD">修改用意說明：若一號議案通過，本案須隨之修正。
+  </td><td id="&gt;RPO">此為紫荊書院標準作業程序作業增修要點內容。
+  </td></tr></tbody></table><p id="13cd22dc-bdca-4068-a4a3-7cf15a1dd37e" class="">
+</p></div></article></body></html>
